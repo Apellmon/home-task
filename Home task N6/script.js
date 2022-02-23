@@ -42,7 +42,7 @@ function isEqual(object1, object2) {
     return true;
 }
 
-function countChars_long(str) {
+function countChars(str) {
     const result = {};
     const chars = str.split("");
 
@@ -60,3 +60,12 @@ function countChars_long(str) {
 }
 
 
+function countChars1(str) {
+    const result = {};
+    const chars = str.split("");
+    for (i = 0; i < chars.length; i++) {
+        let count = result[chars[i]] ? result[chars[i]] : 0;
+        result[chars[i]] = count + 1;
+    }
+    return result;
+}
