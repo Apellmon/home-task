@@ -1,27 +1,34 @@
 const testObject = {
-    id:1,
+    id: 1,
     email: "test@test.com",
     firstName: "Peter",
     lastName: "Parker",
     isAdmin: true,
-    fff:{hghg:3}
+    fff: {
+        hghg: 3
+    }
 
 }
-const testObject2 = {    id:1,
+const testObject2 = {
+    id: 1,
     email: "test@test.com",
     firstName: "Peter",
     lastName: "Parker",
     isAdmin: true,
-    fff:{hghg:2}}
+    fff: {
+        hghg: 2
+    }
+}
 
-function copy (target,origin) {
+////1 task
+function copy(target, origin) {
     let terget = {};
-    for (let key in origin){
-           target[key] = origin[key];
+    for (let key in origin) {
+        target[key] = origin[key];
     }
     return target;
 }
-
+////2 task
 function isEqual(object1, object2) {
     const objectKey = Object.keys(object1);
     const objectKey2 = Object.keys(object2);
@@ -41,8 +48,8 @@ function isEqual(object1, object2) {
 
     return true;
 }
-
-function countChars_long(str) {
+///3 task
+function countChars(str) {
     const result = {};
     const chars = str.split("");
 
@@ -60,3 +67,12 @@ function countChars_long(str) {
 }
 
 
+function countChars1(str) {
+    const result = {};
+    const chars = str.split("");
+    for (i = 0; i < chars.length; i++) {
+        let count = result[chars[i]] ? result[chars[i]] : 0;
+        result[chars[i]] = count + 1;
+    }
+    return result;
+}
